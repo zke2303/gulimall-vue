@@ -13,7 +13,7 @@ export default {
       data: [],
       defaultProps: {
         children: 'children',
-        label: 'label'
+        label: 'name'
       }
     }
   },
@@ -26,7 +26,7 @@ export default {
             url: this.$http.adornUrl('/product/category/list/tree'),
             method: 'get',
         }).then((res) => {
-            console.log(res)
+            this.data = res.data.page
         })
     }
   },
